@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  header .logo {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .orange {
+    color: orange;
+  }
+  
+  .instruction {
+    margin: 15px 0;
+    font-size: 15px;
+  }
+  
+  .card-container {
+    perspective: 1000px;
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    cursor: pointer;
+  }
+  
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .card-face.back {
+    background: #1e3a8a;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+
+  .logo-back img {
+    width: 30%; 
+    transition: transform 0.4s ease, filter 0.4s ease;
+    margin-bottom: 2px;
+  }
+  
+  /* Efecto hover */
+  .logo-back img:hover {
+    transform: scale(1.3) rotate(1deg); /* agranda y rota ligeramente */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
+  
+  
+  .card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .services-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Menos espacio entre ítems */
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65px; /* Más angosto para que entren los 4 */
+  }
+  
+  .service i {
+    font-size: 30px;
+    color: #1e3a8a;
+    margin-bottom: 4px;
+    transition: transform 0.3s ease;
+  }
+  
+  .service span {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    color: #1e3a8a;
+  }
+  
+  .service:hover i {
+    transform: scale(1.2);
+  }
+  
+  /* Responsivo para móviles */
+  @media (max-width: 480px) {
+    .services-icons {
+      gap: 10px;
+    }
+  
+    .service {
+      width: 60px;
+    }
+  
+    .service i {
+      font-size: 26px;
+    }
+  
+    .service span {
+      font-size: 11px;
+    }
+  }
+  
+  
+  
+  .logo-back {
+    font-size: 44px;
+    margin-bottom: 12px;
+  }
+  
+  .buttons {
+    margin: 20px 0;
+  }
+  
+  button {
+    margin: 10px 5px;
+    padding: 12px 24px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background: #2563eb;
+  }
+  
+  .contact {
+    background: #e0f2fe;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .contact h3 {
+    margin-bottom: 15px;
+  }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(178px, 1fr));
+    gap: 10px;
+  }
+  
+  .contact-grid a {
+    text-decoration: none;
+    color: #1e3a8a;
+    background: white;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #1e3a8a;
+    box-shadow: 0 4px 10px rgba(30, 58, 138, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .contact-grid a i {
+    font-size: 18px;
+    color: #1e3a8a;
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-grid a:hover {
+    background: #1e3a8a;
+    color: white;
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.2);
+  }
+  
+  .contact-grid a:hover i {
+    color: white;
+    transform: scale(1.2);
+  }
+  
+  
+  footer {
+    margin-top: 40px;
+    font-size: 13px;
+    color: #6b7280;
+    padding: 0 15px;
+  }
+  
+  /* RESPONSIVE VIEW */
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 22px;
+    }
+  
+    .card {
+      height: 240px;
+    }
+  
+    .card-title {
+      font-size: 18px;
+    }
+  
+    .services {
+      font-size: 14px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    button {
+      width: 100%;
+      margin: 8px 0;
+    }
+  
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+  /* Mejora visual para el bloque de contacto */
+.contact {
+    background: #88b9da;
+    padding: 25px;
+    border-radius: 16px;
+    margin: 20px auto;
+    max-width: 600px;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); nuevo efecto */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact:hover {
+    transform: scale(1.01);
+    box-shadow: 0 12px 25px rgba(253, 252, 252, 0.2);
+  }
+  
+  /* Estilos modernos para los botones con íconos llamativos */
+  .buttons {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 5px;
+    padding: 12px 24px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s ease;
+    font-size: 14px;
+  }
+  
+  button i {
+    font-size: 18px;
+  }
+  
+  button:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+  }
+  

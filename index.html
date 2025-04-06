@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarjeta de Presentación</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+  
+    <h1><span>SOLUCIONES</span> <span class="orange">INTEGRALES</span></h1>
+    <p>Tarjeta de Presentación Corporativa</p>
+  </header>
+
+  <main>
+    <p class="instruction">Haz clic en la tarjeta para ver el reverso o usa las flechas ← → del teclado</p>
+
+    <div class="card-container" tabindex="0">
+      <div class="card" id="card">
+        <div class="card-face front">
+            <img src="logo.png" alt="Logo" class="logo" />
+          <p class="slogan">Tecnología a su servicio</p>
+          <div class="services-icons">
+            <div class="service">
+              <i class="fas fa-store"></i>
+              <span>Ventas</span>
+            </div>
+            <div class="service">
+              <i class="fas fa-tools"></i>
+              <span>Reparación</span>
+            </div>
+            <div class="service">
+              <i class="fas fa-video"></i>
+              <span>Cámaras</span>
+            </div>
+            <div class="service">
+              <i class="fas fa-shield-alt"></i>
+              <span>Seguridad</span>
+            </div>
+          </div>
+          
+        </div>
+        <div class="card-face back">
+          <div class="logo-back">
+            <img src="logoBack.png" alt="Logo" class="logo" />    
+        </div>
+          <h2><span>SOLUCIONES</span> <span class="orange">INTEGRALES</span></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="shareCard()">
+          <i class="fas fa-share-alt"></i> Compartir
+        </button>
+        <button onclick="downloadCard()">
+          <i class="fas fa-download"></i> Descargar
+        </button>
+      </div>
+      
+
+    <section class="contact">
+      <h3>Contacto Directo</h3>
+      <div class="contact-grid">
+        <a href="tel:+573124992941">
+          <i class="fas fa-phone-alt"></i> Llamar
+        </a>
+        <a href="mailto:correo@ejemplo.com">
+          <i class="fas fa-envelope"></i> Correo
+        </a>
+        <a href="https://tusitio.com" target="_blank">
+          <i class="fas fa-globe"></i> Sitio Web
+        </a>
+        <a href="https://maps.app.goo.gl/RtYwMySHEowDd5yJ6" target="_blank">
+          <i class="fas fa-map-marker-alt"></i> Ubicación
+        </a>
+      </div>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Soluciones Integrales - Todos los derechos reservados</p>
+    <p>Servicios de tecnología, venta, reparación y mantenimiento de equipos. Designed by
+        <a class="font-weight-semi-bold" href="https://rody216.github.io/cvraam/">RAAMSOFT</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</body>
+</html>
+
