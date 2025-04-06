@@ -31,11 +31,12 @@
     font-size: 15px;
   }
   
+  /* CARD */
   .card-container {
     perspective: 1000px;
     width: 350px;
     height: 200px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto; /* se añadió espacio inferior */
     position: relative;
   }
   
@@ -46,6 +47,10 @@
     transform-style: preserve-3d;
     transition: transform 0.8s;
     cursor: pointer;
+  }
+  
+  .card.flip {
+    transform: rotateY(180deg);
   }
   
   .card-face {
@@ -69,34 +74,34 @@
     transform: rotateY(180deg);
   }
   
-
-  .logo-back img {
-    width: 30%; 
-    transition: transform 0.4s ease, filter 0.4s ease;
-    margin-bottom: 2px;
-  }
-  
-  /* Efecto hover */
-  .logo-back img:hover {
-    transform: scale(1.3) rotate(1deg); /* agranda y rota ligeramente */
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  }
-  
-  
-  .card.flip {
-    transform: rotateY(180deg);
-  }
-  
   .card-title {
     font-size: 20px;
     margin-bottom: 10px;
   }
   
+  /* LOGO BACK */
+  .logo-back {
+    font-size: 44px;
+    margin-bottom: 12px;
+  }
+  
+  .logo-back img {
+    width: 30%;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    margin-bottom: 2px;
+  }
+  
+  .logo-back img:hover {
+    transform: scale(1.3) rotate(1deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  }
+  
+  /* SERVICES */
   .services-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Menos espacio entre ítems */
+    gap: 10px;
     padding: 10px 0;
     flex-wrap: wrap;
   }
@@ -106,7 +111,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 65px; /* Más angosto para que entren los 4 */
+    width: 65px;
   }
   
   .service i {
@@ -127,58 +132,51 @@
     transform: scale(1.2);
   }
   
-  /* Responsivo para móviles */
-  @media (max-width: 480px) {
-    .services-icons {
-      gap: 10px;
-    }
-  
-    .service {
-      width: 60px;
-    }
-  
-    .service i {
-      font-size: 26px;
-    }
-  
-    .service span {
-      font-size: 11px;
-    }
-  }
-  
-  
-  
-  .logo-back {
-    font-size: 44px;
-    margin-bottom: 12px;
-  }
-  
+  /* BUTTONS */
   .buttons {
-    margin: 20px 0;
+    margin: 20px 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
   
   button {
-    margin: 10px 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 12px 24px;
     background: #1e3a8a;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
     font-size: 14px;
+    transition: background 0.3s, transform 0.3s ease;
+  }
+  
+  button i {
+    font-size: 18px;
   }
   
   button:hover {
     background: #2563eb;
+    transform: scale(1.05);
   }
   
+  /* CONTACT SECTION */
   .contact {
-    background: #e0f2fe;
-    padding: 20px;
+    background: #88b9da;
+    padding: 25px;
     border-radius: 16px;
     margin: 20px auto;
     max-width: 600px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact:hover {
+    transform: scale(1.01);
+    box-shadow: 0 12px 25px rgba(253, 252, 252, 0.2);
   }
   
   .contact h3 {
@@ -224,7 +222,7 @@
     transform: scale(1.2);
   }
   
-  
+  /* FOOTER */
   footer {
     margin-top: 40px;
     font-size: 13px;
@@ -238,7 +236,8 @@
       font-size: 22px;
     }
   
-    .card {
+    .card-container {
+      width: 90%;
       height: 240px;
     }
   
@@ -246,15 +245,31 @@
       font-size: 18px;
     }
   
-    .services {
-      font-size: 14px;
+    .services-icons {
+      gap: 10px;
+    }
+  
+    .service {
+      width: 60px;
+    }
+  
+    .service i {
+      font-size: 26px;
+    }
+  
+    .service span {
+      font-size: 11px;
+    }
+  
+    .buttons {
       flex-direction: column;
       align-items: center;
+      gap: 12px;
     }
   
     button {
       width: 100%;
-      margin: 8px 0;
+      justify-content: center;
     }
   
     .contact-grid {
@@ -262,53 +277,4 @@
     }
   }
   
-
-  /* Mejora visual para el bloque de contacto */
-.contact {
-    background: #88b9da;
-    padding: 25px;
-    border-radius: 16px;
-    margin: 20px auto;
-    max-width: 600px;
-    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); nuevo efecto */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  .contact:hover {
-    transform: scale(1.01);
-    box-shadow: 0 12px 25px rgba(253, 252, 252, 0.2);
-  }
-  
-  /* Estilos modernos para los botones con íconos llamativos */
-  .buttons {
-    margin: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 10px 5px;
-    padding: 12px 24px;
-    background: #1e3a8a;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s ease;
-    font-size: 14px;
-  }
-  
-  button i {
-    font-size: 18px;
-  }
-  
-  button:hover {
-    background: #2563eb;
-    transform: scale(1.05);
-  }
   
