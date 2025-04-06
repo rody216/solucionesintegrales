@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tarjeta de Presentación</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <script defer src="script.js"></script>
+  <script defer src="js/script.js"></script>
 </head>
 <body>
   <header>
   
-    <h1><span>SOLUCIONES</span> <span class="orange">INTEGRALES</span></h1>
+    <h1><span>SISTEMAS</span> <span class="orange">INTEGRALES</span></h1>
     <p>Tarjeta de Presentación Corporativa</p>
   </header>
 
@@ -22,7 +22,7 @@
     <div class="card-container" tabindex="0">
       <div class="card" id="card">
         <div class="card-face front">
-            <img src="logo.png" alt="Logo" class="logo" />
+            <img src="img/logo2.png" alt="Logo" class="logo" />
           <p class="slogan">Tecnología a su servicio</p>
           <div class="services-icons">
             <div class="service">
@@ -46,15 +46,15 @@
         </div>
         <div class="card-face back">
           <div class="logo-back">
-            <img src="logoBack.png" alt="Logo" class="logo" />    
+            <img src="img/logoBack.png" alt="Logo" class="logo" />    
         </div>
-          <h2><span>SOLUCIONES</span> <span class="orange">INTEGRALES</span></h2>
+          <h2><span>SISTEMAS</span> <span class="orange">INTEGRALES</span></h2>
         </div>
       </div>
     </div>
 
     <div class="buttons">
-        <button onclick="shareCard()">
+        <button id="shareBtn">
           <i class="fas fa-share-alt"></i> Compartir
         </button>
         <button onclick="downloadCard()">
@@ -62,6 +62,19 @@
         </button>
       </div>
       
+      <!-- Opciones alternativas de compartir -->
+<div id="fallbackShare" style="display: none; margin-top: 10px;">
+    <p>Compartir por:</p>
+    <a href="img/QR.png" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a><br>
+    <a href="mailto:?subject=Mi tarjeta digital&body=Te comparto mi tarjeta digital. Puedes verla o descargarla desde este enlace: https://tu-dominio.com/qr.png">
+      <i class="fas fa-envelope"></i> Email
+    </a><br>
+    <a href="/img/QR.png" download>
+      <i class="fas fa-download"></i> Descargar QR
+    </a>
+  </div>
 
     <section class="contact">
       <h3>Contacto Directo</h3>
@@ -72,7 +85,7 @@
         <a href="mailto:correo@ejemplo.com">
           <i class="fas fa-envelope"></i> Correo
         </a>
-        <a href="https://tusitio.com" target="_blank">
+        <a href="https://rody216.github.io/solucionesintegrales/" target="_blank">
           <i class="fas fa-globe"></i> Sitio Web
         </a>
         <a href="https://maps.app.goo.gl/RtYwMySHEowDd5yJ6" target="_blank">
@@ -84,7 +97,7 @@
   </main>
 
   <footer>
-    <p>© 2025 Soluciones Integrales - Todos los derechos reservados</p>
+    <p>© 2025 Sistemas Integrales - Todos los derechos reservados</p>
     <p>Servicios de tecnología, venta, reparación y mantenimiento de equipos. Designed by
         <a class="font-weight-semi-bold" href="https://rody216.github.io/cvraam/">RAAMSOFT</a></p>
   </footer>

@@ -12,11 +12,7 @@
     padding: 20px;
   }
   
-  header .logo {
-    width: 60px;
-    margin-bottom: 10px;
-  }
-  
+   
   header h1 {
     font-size: 26px;
     font-weight: bold;
@@ -34,8 +30,8 @@
   /* CARD */
   .card-container {
     perspective: 1000px;
-    width: 350px;
-    height: 200px;
+    width: 490px;
+    height: 280px;
     margin: 0 auto 30px auto; /* se añadió espacio inferior */
     position: relative;
   }
@@ -67,6 +63,20 @@
     align-items: center;
     padding: 20px;
   }
+
+  .card-face.front .logo {
+    height: 60%;
+    width: auto;
+    max-height: 80%;
+    object-fit: contain;
+  }
+
+  .card-face.front .logo:hover {
+    transform: scale(1.2) rotate(1deg);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+   
+  }
+  
   
   .card-face.back {
     background: #1e3a8a;
